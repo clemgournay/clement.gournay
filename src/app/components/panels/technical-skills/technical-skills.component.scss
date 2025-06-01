@@ -1,0 +1,14 @@
+@import '../../../styles/panel.scss';
+
+.panel {
+  .content {
+    padding: 40px;
+    .skills {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+
+    }
+  }
+}

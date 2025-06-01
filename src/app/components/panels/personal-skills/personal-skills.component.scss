@@ -1,0 +1,29 @@
+@import '../../../styles/panel.scss';
+
+.panel {
+  .content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .skills {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .skill {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .panel {
+    .content {
+      overflow: hidden;
+    }
+  }
+}

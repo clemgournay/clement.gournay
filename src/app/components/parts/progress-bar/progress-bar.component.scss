@@ -1,0 +1,12 @@
+@import '../../../styles/theme.scss';
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 10px;
+  .progress {
+    transition: all 2s ease-out;
+    background: $highlightColor;
+    height: 100%;
+  }
+}

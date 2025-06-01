@@ -1,0 +1,46 @@
+
+@import '../../../styles/theme.scss';
+
+$size: 150px;
+$lineWidth: 15px;
+
+.chart {
+  position: relative;
+  width: $size;
+  height: $size;
+}
+
+.shape, .mask, .fill {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.shape,
+.mask,
+.fill {
+  position: absolute;
+  background-color: $mainColor;
+}
+
+.mask,
+.fill {
+  -webkit-backface-visibility: hidden;
+  transition: transform 1s;
+  border-radius: 50%;
+}
+
+
+.fill {
+  background-color: $highlightColor;
+}
+
+.cutout {
+  position: absolute;
+  background-color: $darkColor;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

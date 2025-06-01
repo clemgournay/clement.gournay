@@ -1,0 +1,27 @@
+<div class="panel">
+  <div class="title">
+    <fa-icon [icon]="faGraduationCap"></fa-icon>
+    <label>Educational Background</label>
+  </div>
+  <div class="content">
+    <div class="table-cont">
+      <div class="cols">
+        <div class="col period-cont">Period</div>
+        <div class="col place-cont">School name</div>
+        <div class="col type-cont">Type</div>
+      </div>
+      <div class="scroll">
+        <div class="table">
+          @for (graduation of graduations; track graduation) {
+            <div class="tr">
+              <div class="td period-cont">{{graduation.start}} - {{graduation.end}}</div>
+              <div class="td place-cont">{{graduation.place}}</div>
+              <div class="td type-cont">{{graduation.type}}</div>
+            </div>
+          }
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

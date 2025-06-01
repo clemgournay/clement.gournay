@@ -1,0 +1,25 @@
+<div class="panel">
+  <div class="title">
+    <fa-icon [icon]="faIdCard"></fa-icon>
+    <label>Identity</label>
+  </div>
+  <div class="content">
+    <div class="photo-cont">
+      <div class="photo"></div>
+    </div>
+    <div class="info-cont">
+      <div class="fields">
+        @for (field of fields; track field) {
+          <div class="field" (click)="openField(field)" [class.link]="field.link" [class.highlight]="field.highlight">
+            <div class="icon">
+              <fa-icon [icon]="field.icon"></fa-icon>
+            </div>
+            <div class="value">
+              <span [innerHTML]="field.value"></span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

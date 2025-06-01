@@ -1,0 +1,102 @@
+@import '../../../styles/panel.scss';
+
+.panel {
+  .content {
+    display: flex;
+    overflow: hidden;
+    .photo-cont {
+      width: 50%;
+      min-width: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      .photo {
+        width: 12vw;
+        height: 12vw;
+        max-width: 250px;
+        max-height: 250px;
+        border-radius: 50%;
+        background-image: url(../../../../../public/images/photo.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    .info-cont {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      .fields {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .field {
+          display: flex;
+          gap: 10px;
+          &.link {
+            cursor: pointer;
+            color: $highlightColor;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          &.highlight {
+            color: $highlightColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1780px) {
+  .panel {
+    .content {
+      .photo-cont {
+        min-width: 200px;
+        .photo {
+          width: 10vw;
+          height: 10vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .panel {
+    .content {
+      display: block;
+      overflow: auto;
+      .photo-cont {
+        width: 100%;
+        padding-bottom: 0px;
+        .photo {
+          width: 140px;
+          height: 140px;
+        }
+      }
+      .info-cont {
+        width: calc(100% - 140px);
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .panel {
+    .content {
+      display: block;
+      .photo-cont {
+        width: 100%;
+        padding: 40px;
+        .photo {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+}

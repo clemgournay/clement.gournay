@@ -1,0 +1,18 @@
+<div class="panel">
+  <div class="title">
+    <fa-icon [icon]="faHourglass"></fa-icon>
+    <label>Hobbies</label>
+  </div>
+  <div class="content">
+    <div class="hobbies">
+      @for (hobby of hobbies; track hobby.key) {
+        <div class="hobby">
+          <div class="center">
+            <fa-icon [icon]="hobby.icon"></fa-icon>
+            <div class="name">{{hobby.name}}</div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

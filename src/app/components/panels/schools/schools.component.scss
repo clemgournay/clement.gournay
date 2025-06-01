@@ -1,0 +1,16 @@
+@import '../../../styles/panel.scss';
+@import '../../../styles/table.scss';
+
+.panel {
+  .content {
+    .period-cont {
+      width: 150px;
+    }
+    .place-cont {
+      width: calc(50% - 75px);
+    }
+    .type-cont {
+      width: calc(50% - 75px);
+    }
+  }
+}

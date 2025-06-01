@@ -1,0 +1,16 @@
+<div class="panel">
+  <div class="title">
+    <fa-icon [icon]="faGear"></fa-icon>
+    <label>Technical Skills</label>
+  </div>
+  <div class="content">
+    <div class="skills">
+      @for (skill of skills; track skill.key; let index = $index) {
+        <div class="skill">
+          <label>{{skill.name}}</label>
+          <app-progress-bar [index]="index" [delay]="0.2" [value]="skill.value" [animated]="skill.animated"></app-progress-bar>
+        </div>
+      }
+    </div>
+  </div>
+</div>

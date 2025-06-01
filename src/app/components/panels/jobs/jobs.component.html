@@ -1,0 +1,28 @@
+<div class="panel">
+  <div class="title">
+    <fa-icon [icon]="faBuilding"></fa-icon>
+    <label>Professional Background</label>
+  </div>
+  <div class="content">
+    <div class="table-cont">
+      <div class="cols">
+        <div class="col period-cont">Period</div>
+        <div class="col place-cont">Company name</div>
+        <div class="col type-cont">Type</div>
+      </div>
+      <div class="scroll">
+        <div class="table">
+          @for (job of jobs; track job) {
+            <div class="tr">
+              <div class="td period-cont">{{job.start}} - {{job.end}}</div>
+              <div class="td place-cont">{{job.place}}</div>
+              <div class="td type-cont">{{job.type}}</div>
+            </div>
+          }
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

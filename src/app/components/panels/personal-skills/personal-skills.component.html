@@ -1,0 +1,15 @@
+<div class="panel">
+  <div class="title">
+    <fa-icon [icon]="faUser"></fa-icon>
+    <label>Personal Skills</label>
+  </div>
+  <div class="content">
+    <div class="skills">
+      @for (skill of skills; track skill.key; let i = $index) {
+        <div class="skill">
+          <app-radial-chart [index]="i" [label]="skill.name" [value]="skill.value" [delay]="0.5" [animated]="skill.animated"></app-radial-chart>
+        </div>
+      }
+    </div>
+  </div>
+</div>

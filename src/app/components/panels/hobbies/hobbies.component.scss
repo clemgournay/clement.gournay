@@ -1,0 +1,72 @@
+@import '../../../styles/panel.scss';
+
+.panel {
+  .content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .hobbies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 400px;
+      max-width: 400px;
+      margin: auto;
+
+      .hobby {
+        width: 12vmin;
+        height: 12vmin;
+        max-width: 200px;
+        max-height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 1px solid $textColor;
+
+        &:hover {
+          background: $highlightColor;
+          color: green;
+          text-shadow: none;
+        }
+
+        .ng-fa-icon {
+          font-size: 5vmin;
+        }
+        .name {
+          font-size: 18px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .panel {
+    .content {
+      .hobbies {
+        max-width: 100%;
+        .hobby {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .panel {
+    .content {
+      .hobbies {
+        .hobby {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<div class="chart" [style.width]="size + 'px'" [style.height]="size + 'px'">
+  <div class="shape">
+    <div class="mask full-mask"
+      [style.clip]="'rect(0px, ' + size + 'px, ' + size + 'px, ' + (size/2) + 'px)'"
+      [style.transitionDelay]="(index * delay) + 's'"
+      [style.transform]="'rotate(' + getFullMaskRotation() + 'deg)'"
+    >
+      <div class="fill"
+        [style.clip]="'rect(0px, ' + (size/2) + 'px, ' + size + 'px, 0px)'"
+        [style.transitionDelay]="(index * delay) + 's'"
+        [style.transform]="'rotate(' + getFullMaskRotation() + 'deg)'">
+      </div>
+    </div>
+    <div class="mask" [style.clip]="'rect(0px, ' + size + 'px, ' + size + 'px, ' + (size/2) + 'px)'">
+      <div class="fill"
+        [style.clip]="'rect(0px, ' + (size/2) + 'px, ' + size + 'px, 0px)'"
+      ></div>
+      <div class="fill"
+        [style.clip]="'rect(0px, ' + (size/2) + 'px, ' + size + 'px, 0px)'"
+        [style.transitionDelay]="(index * delay) + 's'"
+        [style.transform]="'rotate(' + getFullMaskRotation() + 'deg)'">
+      </div>
+      <div class="fill shim"
+        [style.clip]="'rect(0px, ' + (size/2) + 'px, ' + size + 'px, 0px)'"
+        [style.transitionDelay]="(index * delay) + 's'"
+        [style.transform]="'rotate(' + getMaskShimRotation() + 'deg)'"
+      ></div>
+    </div>
+  </div>
+  <div class="cutout"
+    [style.marginLeft]="lineWidth + 'px'"
+    [style.marginTop]="lineWidth + 'px'"
+    [style.width]="(size - (lineWidth * 2)) + 'px'"
+    [style.height]="(size - (lineWidth * 2)) + 'px'"
+  >
+    <div class="center">
+      <div class="label">{{label}}</div>
+      <div class="value">{{value}}%</div>
+    </div>
+  </div>
+</div>
