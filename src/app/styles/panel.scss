@@ -8,10 +8,10 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   .title {
     display: flex;
+    align-items: center;
     gap: 10px;
     padding: 0px 20px;
     height: 50px;
-    line-height: 50px;
     border-bottom: 1px solid rgb(0, 92, 0);
     background: rgb(0 164 82 / 10%);
     color: $highlightColor;
