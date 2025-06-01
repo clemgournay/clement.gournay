@@ -9,7 +9,7 @@ main {
     .ng-fa-icon {
       font-size:  30px;
     }
-    h2 {
+    h1 {
       margin: 0;
     }
   }
@@ -89,6 +89,19 @@ main {
           width: 100%;
           height: auto;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    h1 {
+      .separator {
+        display: none;
+      }
+      .subtitle {
+        display: block;
       }
     }
   }

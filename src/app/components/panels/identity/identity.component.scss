@@ -40,6 +40,9 @@
             &:hover {
               text-decoration: none;
             }
+            &:visited {
+              color: $highlightColor;
+            }
           }
           &.highlight {
             color: $highlightColor;
